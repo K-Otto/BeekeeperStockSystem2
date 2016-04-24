@@ -31,8 +31,7 @@ public class SalesmanRepositoryImpl extends SQLiteOpenHelper implements Salesman
     private static final String DATABASE_CREATE = " CREATE TABLE "
             + TABLE_NAME + "("
             + COLUMN_ID + " INTEGER  PRIMARY KEY AUTOINCREMENT , "
-            + COLUMN_SALARY + " TEXT NOT NULL , "
-            + COLUMN_PERSON + " TEXT NOT NULL  );";
+            + COLUMN_SALARY + " TEXT NOT NULL  );";
 
 
     public SalesmanRepositoryImpl(Context context) {
@@ -56,8 +55,7 @@ public class SalesmanRepositoryImpl extends SQLiteOpenHelper implements Salesman
                 new String[]{
 
                         COLUMN_ID,
-                        COLUMN_SALARY,
-                        COLUMN_PERSON},
+                        COLUMN_SALARY},
                 COLUMN_ID + " =? ",
                 new String[]{String.valueOf(id)},
                 null,

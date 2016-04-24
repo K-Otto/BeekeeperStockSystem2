@@ -31,8 +31,7 @@ public class SubLocationRepositoryImpl extends SQLiteOpenHelper implements SubLo
     private static final String DATABASE_CREATE = " CREATE TABLE "
             + TABLE_NAME + "("
             + COLUMN_ID + " INTEGER  PRIMARY KEY AUTOINCREMENT , "
-            + COLUMN_SUBLOCATIONNAME + " TEXT NOT NULL , "
-            + COLUMN_BEEKEEPER + " TEXT NOT NULL  );";
+            + COLUMN_SUBLOCATIONNAME + " TEXT NOT NULL  );";
 
 
     public SubLocationRepositoryImpl(Context context) {
@@ -56,8 +55,7 @@ public class SubLocationRepositoryImpl extends SQLiteOpenHelper implements SubLo
                 new String[]{
 
                         COLUMN_ID,
-                        COLUMN_SUBLOCATIONNAME,
-                        COLUMN_BEEKEEPER},
+                        COLUMN_SUBLOCATIONNAME},
                 COLUMN_ID + " =? ",
                 new String[]{String.valueOf(id)},
                 null,

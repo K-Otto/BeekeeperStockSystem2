@@ -32,9 +32,7 @@ public class OrderRepositoryImpl extends SQLiteOpenHelper implements OrderReposi
     private static final String DATABASE_CREATE = " CREATE TABLE "
             + TABLE_NAME + "("
             + COLUMN_ID + " INTEGER  PRIMARY KEY AUTOINCREMENT , "
-            + COLUMN_ORDERDATE + " TEXT NOT NULL , "
-            + COLUMN_SALESMAN + " TEXT NOT NULL , "
-            + COLUMN_CUSTOMER + " TEXT NOT NULL  );";
+            + COLUMN_ORDERDATE + " TEXT NOT NULL );";
 
 
     public OrderRepositoryImpl(Context context) {
@@ -58,9 +56,7 @@ public class OrderRepositoryImpl extends SQLiteOpenHelper implements OrderReposi
                 new String[]{
 
                         COLUMN_ID,
-                        COLUMN_ORDERDATE,
-                        COLUMN_SALESMAN,
-                        COLUMN_CUSTOMER},
+                        COLUMN_ORDERDATE},
                 COLUMN_ID + " =? ",
                 new String[]{String.valueOf(id)},
                 null,

@@ -31,8 +31,7 @@ public class HiveRepositoryImpl extends SQLiteOpenHelper implements HiveReposito
     private static final String DATABASE_CREATE = " CREATE TABLE "
             + TABLE_NAME + "("
             + COLUMN_ID + " INTEGER  PRIMARY KEY AUTOINCREMENT , "
-            + COLUMN_HIVESTATE + " TEXT NOT NULL , "
-            + COLUMN_SUBLOCATION + " TEXT NOT NULL  );";
+            + COLUMN_HIVESTATE + " TEXT NOT NULL  );";
 
 
     public HiveRepositoryImpl(Context context) {
@@ -56,8 +55,7 @@ public class HiveRepositoryImpl extends SQLiteOpenHelper implements HiveReposito
                 new String[]{
 
                         COLUMN_ID,
-                        COLUMN_HIVESTATE,
-                        COLUMN_SUBLOCATION},
+                        COLUMN_HIVESTATE},
                 COLUMN_ID + " =? ",
                 new String[]{String.valueOf(id)},
                 null,

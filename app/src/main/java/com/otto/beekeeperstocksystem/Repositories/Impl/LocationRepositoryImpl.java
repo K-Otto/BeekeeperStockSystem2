@@ -31,8 +31,7 @@ public class LocationRepositoryImpl extends SQLiteOpenHelper implements Location
     private static final String DATABASE_CREATE = " CREATE TABLE "
             + TABLE_NAME + "("
             + COLUMN_ID + " INTEGER  PRIMARY KEY AUTOINCREMENT , "
-            + COLUMN_LOCATIONNAME + " TEXT NOT NULL , "
-            + COLUMN_BEEKEEPER + " TEXT NOT NULL  );";
+            + COLUMN_LOCATIONNAME + " TEXT NOT NULL );";
 
 
     public LocationRepositoryImpl(Context context) {
@@ -56,8 +55,7 @@ public class LocationRepositoryImpl extends SQLiteOpenHelper implements Location
                 new String[]{
 
                         COLUMN_ID,
-                        COLUMN_LOCATIONNAME,
-                        COLUMN_BEEKEEPER},
+                        COLUMN_LOCATIONNAME},
                 COLUMN_ID + " =? ",
                 new String[]{String.valueOf(id)},
                 null,

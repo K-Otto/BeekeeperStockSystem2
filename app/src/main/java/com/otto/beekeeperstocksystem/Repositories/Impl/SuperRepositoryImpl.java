@@ -31,8 +31,7 @@ public class SuperRepositoryImpl extends SQLiteOpenHelper implements SuperReposi
     private static final String DATABASE_CREATE = " CREATE TABLE "
             + TABLE_NAME + "("
             + COLUMN_ID + " INTEGER  PRIMARY KEY AUTOINCREMENT , "
-            + COLUMN_SUPERSTATE + " TEXT NOT NULL , "
-            + COLUMN_HIVE + " TEXT NOT NULL  );";
+            + COLUMN_SUPERSTATE + " TEXT NOT NULL );";
 
 
     public SuperRepositoryImpl(Context context) {
@@ -56,8 +55,7 @@ public class SuperRepositoryImpl extends SQLiteOpenHelper implements SuperReposi
                 new String[]{
 
                         COLUMN_ID,
-                        COLUMN_SUPERSTATE,
-                        COLUMN_HIVE},
+                        COLUMN_SUPERSTATE},
                 COLUMN_ID + " =? ",
                 new String[]{String.valueOf(id)},
                 null,

@@ -33,8 +33,7 @@ public class CustomerRepositoryImpl extends SQLiteOpenHelper implements Customer
     private static final String DATABASE_CREATE = " CREATE TABLE "
             + TABLE_NAME + "("
             + COLUMN_ID + " INTEGER  PRIMARY KEY AUTOINCREMENT , "
-            + COLUMN_ADDRESS + " TEXT NOT NULL , "
-            + COLUMN_PERSON + " TEXT NOT NULL  );";
+            + COLUMN_ADDRESS + " TEXT NOT NULL );";
 
 
     public CustomerRepositoryImpl(Context context) {
@@ -58,8 +57,7 @@ public class CustomerRepositoryImpl extends SQLiteOpenHelper implements Customer
                 new String[]{
 
                         COLUMN_ID,
-                        COLUMN_ADDRESS,
-                        COLUMN_PERSON},
+                        COLUMN_ADDRESS},
                 COLUMN_ID + " =? ",
                 new String[]{String.valueOf(id)},
                 null,

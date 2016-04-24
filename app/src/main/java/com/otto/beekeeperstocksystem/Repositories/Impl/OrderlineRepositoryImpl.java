@@ -34,9 +34,7 @@ public class OrderlineRepositoryImpl extends SQLiteOpenHelper implements Orderli
             + TABLE_NAME + "("
             + COLUMN_ID + " INTEGER  PRIMARY KEY AUTOINCREMENT , "
             + COLUMN_UNITPRICE + " TEXT NOT NULL , "
-            + COLUMN_QUANTITY + " TEXT NOT NULL , "
-            + COLUMN_ORDER + " TEXT NOT NULL , "
-            + COLUMN_PRODUCT + " TEXT NOT NULL  );";
+            + COLUMN_QUANTITY + " TEXT NOT NULL  );";
 
 
     public OrderlineRepositoryImpl(Context context) {
@@ -61,9 +59,7 @@ public class OrderlineRepositoryImpl extends SQLiteOpenHelper implements Orderli
 
                         COLUMN_ID,
                         COLUMN_UNITPRICE,
-                        COLUMN_QUANTITY,
-                        COLUMN_ORDER,
-                        COLUMN_PRODUCT},
+                        COLUMN_QUANTITY},
                 COLUMN_ID + " =? ",
                 new String[]{String.valueOf(id)},
                 null,

@@ -34,9 +34,7 @@ public class ProductRepositoryImpl extends SQLiteOpenHelper implements ProductRe
             + TABLE_NAME + "("
             + COLUMN_ID + " INTEGER  PRIMARY KEY AUTOINCREMENT , "
             + COLUMN_TOTALSTOCK + " TEXT NOT NULL , "
-            + COLUMN_TOTALSTOCKREMAINING + " TEXT NOT NULL , "
-            + COLUMN_CATEGORY + " TEXT NOT NULL , "
-            + COLUMN_HARVESTS + " TEXT NOT NULL  );";
+            + COLUMN_TOTALSTOCKREMAINING + " TEXT NOT NULL );";
 
 
     public ProductRepositoryImpl(Context context) {
@@ -61,9 +59,7 @@ public class ProductRepositoryImpl extends SQLiteOpenHelper implements ProductRe
 
                         COLUMN_ID,
                         COLUMN_TOTALSTOCK,
-                        COLUMN_TOTALSTOCKREMAINING,
-                        COLUMN_CATEGORY,
-                        COLUMN_HARVESTS},
+                        COLUMN_TOTALSTOCKREMAINING},
                 COLUMN_ID + " =? ",
                 new String[]{String.valueOf(id)},
                 null,

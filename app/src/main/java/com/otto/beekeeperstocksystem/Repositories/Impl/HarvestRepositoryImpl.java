@@ -33,8 +33,7 @@ public class HarvestRepositoryImpl extends SQLiteOpenHelper implements HarvestRe
             + TABLE_NAME + "("
             + COLUMN_ID + " INTEGER  PRIMARY KEY AUTOINCREMENT , "
             + COLUMN_HARVESTDATE + " TEXT NOT NULL , "
-            + COLUMN_TOTALWEIGHT + " TEXT NOT NULL , "
-            + COLUMN_SUBLOCATION + " TEXT NOT NULL  );";
+            + COLUMN_TOTALWEIGHT + " TEXT NOT NULL  );";
 
 
     public HarvestRepositoryImpl(Context context) {
@@ -59,8 +58,7 @@ public class HarvestRepositoryImpl extends SQLiteOpenHelper implements HarvestRe
 
                         COLUMN_ID,
                         COLUMN_HARVESTDATE,
-                        COLUMN_TOTALWEIGHT,
-                        COLUMN_SUBLOCATION},
+                        COLUMN_TOTALWEIGHT},
                 COLUMN_ID + " =? ",
                 new String[]{String.valueOf(id)},
                 null,

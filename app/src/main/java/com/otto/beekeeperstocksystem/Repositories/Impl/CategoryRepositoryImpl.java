@@ -31,8 +31,7 @@ public class CategoryRepositoryImpl extends SQLiteOpenHelper implements Category
     private static final String DATABASE_CREATE = " CREATE TABLE "
             + TABLE_NAME + "("
             + COLUMN_ID + " INTEGER  PRIMARY KEY AUTOINCREMENT , "
-            + COLUMN_STOCKTYPE + " TEXT NOT NULL , "
-            + COLUMN_BEEKEEPER + " TEXT NOT NULL  );";
+            + COLUMN_STOCKTYPE + " TEXT NOT NULL );";
 
 
     public CategoryRepositoryImpl(Context context) {
@@ -56,8 +55,7 @@ public class CategoryRepositoryImpl extends SQLiteOpenHelper implements Category
                 new String[]{
 
                         COLUMN_ID,
-                        COLUMN_STOCKTYPE,
-                        COLUMN_BEEKEEPER},
+                        COLUMN_STOCKTYPE},
                 COLUMN_ID + " =? ",
                 new String[]{String.valueOf(id)},
                 null,
